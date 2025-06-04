@@ -59,19 +59,19 @@ public class PersonaService {
     public Persona partialPersonUpdate(Persona persona, Integer id) {
         Persona persona1=findById(id);
 
-        if (!persona.getApellido().isEmpty()) {
+        if (persona.getApellido() != null) {
             persona1.setApellido(persona.getApellido());
         }
 
-        if (persona.getNombre().isEmpty()) {
+        if (persona.getNombre() != null) {
             persona1.setNombre(persona.getNombre());
         }
 
-        if (persona.getTelefono().isEmpty()) {
+        if (persona.getTelefono() != null) {
             persona1.setTelefono(persona.getTelefono());
         }
 
-        if (persona.getCorreo().isEmpty()) {
+        if (persona.getCorreo() != null) {
             persona1.setCorreo(persona.getCorreo());
         }
 
