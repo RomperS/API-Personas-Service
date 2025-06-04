@@ -1,11 +1,9 @@
 package com.oswaldo.apipersonasservice.repository;
 
 import com.oswaldo.apipersonasservice.model.Persona;
-import org.aspectj.weaver.patterns.PerObject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Repository
