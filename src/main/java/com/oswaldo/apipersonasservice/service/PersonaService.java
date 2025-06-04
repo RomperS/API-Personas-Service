@@ -42,8 +42,8 @@ public class PersonaService {
         return personaRepository.save(persona);
     }
 
-    public void delete(Persona persona) {
-        personaRepository.delete(persona);
+    public void delete(Integer id) {
+        personaRepository.deleteById(id);
     }
 
     public Persona updatePersona(Persona persona, Integer id) {
