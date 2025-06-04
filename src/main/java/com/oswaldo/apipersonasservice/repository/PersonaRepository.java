@@ -1,13 +1,17 @@
 package com.oswaldo.apipersonasservice.repository;
 
 import com.oswaldo.apipersonasservice.model.Persona;
+import org.aspectj.weaver.patterns.PerObject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import javax.swing.text.html.Option;
+import java.util.Optional;
+
 @Repository
-public interface PersonaRepository extends JpaRepository<Persona, Long> {
-    Persona findByNombre(String nombre);
-    Persona findByApellido(String apellido);
-    Persona findByCorreo(String correo);
-    Persona findByTelefono(String telefono);
+public interface PersonaRepository extends JpaRepository<Persona, Integer> {
+    Optional<Persona> findByNombre(String nombre);
+    Optional<Persona> findByApellido(String apellido);
+    Optional<Persona> findByCorreo(String correo);
+    Optional<Persona> findByTelefono(String telefono);
 }
