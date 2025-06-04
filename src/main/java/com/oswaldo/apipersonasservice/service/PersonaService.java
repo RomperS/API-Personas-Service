@@ -22,24 +22,20 @@ public class PersonaService {
                 .orElseThrow(() -> new RuntimeException("No encontrada la persona con id: " + id));
     }
 
-    public Persona findByNombre(String nombre) {
-        return personaRepository.findByNombre(nombre)
-                .orElseThrow(() -> new RuntimeException("No encontrada la persona con nombre: " + nombre));
+    public List<Persona> findByNombre(String nombre) {
+        return personaRepository.findByNombre(nombre);
     }
 
-    public Persona findByApellido(String apellido) {
-        return personaRepository.findByApellido(apellido)
-                .orElseThrow(() -> new RuntimeException("No encontrada la persona con nombre: " + apellido));
+    public List<Persona> findByApellido(String apellido) {
+        return personaRepository.findByApellido(apellido);
     }
 
-    public Persona findByTelefono(String telefono) {
-        return personaRepository.findByTelefono(telefono)
-                .orElseThrow(() -> new RuntimeException("No encontrada la persona con nombre: " + telefono));
+    public List<Persona> findByTelefono(String telefono) {
+        return personaRepository.findByTelefono(telefono);
     }
 
-    public Persona findByCorreo(String correo) {
-        return personaRepository.findByCorreo(correo)
-                .orElseThrow(() -> new RuntimeException("No encontrada la persona con correo: " + correo));
+    public List<Persona> findByCorreo(String correo) {
+        return personaRepository.findByCorreo(correo);
     }
 
     public Persona save(Persona persona) {
